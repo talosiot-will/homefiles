@@ -1,0 +1,7 @@
+#!/usr/bin/env bash 
+
+for fname in .bashrc .bash_aliases .vimrc
+do
+    cp ~/$fname ~/$fname.backup
+    cp $fname ~/$fname && echo $fname" copied" || echo $fname" failed to copy"
+done
